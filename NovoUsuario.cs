@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace novo_projeto_anker
 {
-    public partial class _00Form2 : Form
+    public partial class NovoUsuario : Form
     {
-        public _00Form2()
+        public NovoUsuario()
         {
             InitializeComponent();
         }
 
-        private void _00Form2_Load(object sender, EventArgs e)
+        private void NovoUsuario_Load(object sender, EventArgs e)
         {
 
         }
@@ -25,6 +25,40 @@ namespace novo_projeto_anker
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_salvar_Click_1(object sender, EventArgs e)
+        {
+            // criando um usuario e atribuindo os dados do banco de dados nele
+
+            Usuario usuario = new Usuario();
+            usuario.nome = tb_name.Text;
+            usuario.senha = tb_senha.Text;
+            usuario.status = cb_status.Text;
+            usuario.nivel = Convert.ToInt32(Math.Round(n_nivel.Value, 0));
+
+            Banco.NovoUsuario(usuario);
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            tb_name.Clear();
+            tb_senha.Clear();
+            cb_status.Text = "";
+            n_nivel.Value = 0;
+        }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_novo_Click(object sender, EventArgs e)
+        {
+            tb_name.Clear();
+            tb_senha.Clear();
+            cb_status.Text = "";
+            n_nivel.Value = 0;
         }
     }
 }

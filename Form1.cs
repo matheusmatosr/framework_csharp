@@ -60,8 +60,27 @@ namespace novo_projeto_anker
             {
                 if (Globais.nivel > 1)
                 {
-                    // NovoUsuario novoUsuario = new NovoUsuario();
-                    // novoUsuario.ShowDialog();
+                   NovoUsuario novoUsuario = new NovoUsuario();
+                   novoUsuario.ShowDialog();
+                } else
+                {
+                    MessageBox.Show("Acesso não permitido! Tente novamente.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário estar logado!");
+            }
+        }
+
+        private void gestãoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if(Globais.nivel > 1)
+                {
+                    GestaoUsuarios gestaoUsuarios = new GestaoUsuarios();
+                    gestaoUsuarios.ShowDialog();
                 } else
                 {
                     MessageBox.Show("Acesso não permitido!");
@@ -69,7 +88,7 @@ namespace novo_projeto_anker
             }
             else
             {
-                MessageBox.Show("É necessário estar logado!");
+                MessageBox.Show("É necessário ter um usuário logado!");
             }
         }
     }

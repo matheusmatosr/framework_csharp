@@ -18,3 +18,5 @@ C:\OneDrive-Personal\Documentos\novo_projeto_anker\obj\Debug\novo_projeto_anker.
 C:\OneDrive-Personal\Documentos\novo_projeto_anker\obj\Debug\novo_projeto_anker.csproj.CopyComplete
 C:\OneDrive-Personal\Documentos\novo_projeto_anker\obj\Debug\novo_projeto_anker.exe
 C:\OneDrive-Personal\Documentos\novo_projeto_anker\obj\Debug\novo_projeto_anker.pdb
+C:\OneDrive-Personal\Documentos\novo_projeto_anker\obj\Debug\novo_projeto_anker.NovoUsuario.resources
+C:\OneDrive-Personal\Documentos\novo_projeto_anker\obj\Debug\novo_projeto_anker.GestaoUsuarios.resources
