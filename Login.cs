@@ -61,5 +61,10 @@ namespace novo_projeto_anker
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

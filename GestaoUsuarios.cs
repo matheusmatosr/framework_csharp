@@ -30,10 +30,6 @@ namespace novo_projeto_anker
         private void GestaoUsuarios_Load(object sender, EventArgs e)
         {
             dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
-
-            // Estilização
-            // dgv_usuarios.Columns[0].Width = 85;
-            // dgv_usuarios.Columns[1].Width = 195;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -58,6 +54,52 @@ namespace novo_projeto_anker
                 cb_status.Text = dt.Rows[0].Field<string>("T_STATUSUSUARIO").ToString();
                 n_nivel.Value = dt.Rows[0].Field<Int64>("N_NIVELUSUARIO");
             }
+        }
+
+        private void btn_novo_Click(object sender, EventArgs e)
+        {
+            NovoUsuario novoUsuario = new NovoUsuario();
+            novoUsuario.ShowDialog();
+            dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
+
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            int linha = dgv_usuarios.SelectedRows[0].Index; // grava a linha que ta selecionada
+
+            // pegando os dados atualizados
+            Usuario u = new Usuario();
+            u.id = Convert.ToInt32(tb_id.Text);
+            u.nome = tb_name.Text;
+            u.senha = tb_senha.Text;
+            u.status = cb_status.Text;
+            u.nivel = Convert.ToInt32(Math.Round(n_nivel.Value, 0));
+
+            Banco.AtualizarUsuario(u);
+            dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
+            dgv_usuarios.CurrentCell = dgv_usuarios[0, linha]; // mantem na seleçao que ta sendo modificada o usuario.
+
+            MessageBox.Show("Alterações salvas com sucesso!");
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseja realmente excluir este usuário?", "Excluir?", MessageBoxButtons.YesNo); // confirmar exclusao
+
+            if (res == DialogResult.Yes)
+            {
+                Banco.DeletarUsuario(tb_id.Text);
+                dgv_usuarios.Rows.Remove(dgv_usuarios.CurrentRow);
+            }
+
+            MessageBox.Show("Usuário excluido com sucesso!");
+
+        }
+
+        private void btn_fechar_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

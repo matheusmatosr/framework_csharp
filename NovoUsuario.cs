@@ -60,5 +60,10 @@ namespace novo_projeto_anker
             cb_status.Text = "";
             n_nivel.Value = 0;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(86, 239);
+            this.label8.Location = new System.Drawing.Point(94, 208);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 16);
             this.label8.TabIndex = 23;
@@ -65,7 +65,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(200, 239);
+            this.label7.Location = new System.Drawing.Point(209, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 16);
             this.label7.TabIndex = 22;
@@ -74,7 +74,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 239);
+            this.label6.Location = new System.Drawing.Point(21, 208);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 21;
@@ -83,7 +83,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(192, 161);
+            this.label5.Location = new System.Drawing.Point(192, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 20;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 161);
+            this.label4.Location = new System.Drawing.Point(12, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 19;
@@ -100,7 +100,8 @@
             // 
             // n_nivel
             // 
-            this.n_nivel.Location = new System.Drawing.Point(195, 180);
+            this.n_nivel.Location = new System.Drawing.Point(195, 166);
+            this.n_nivel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.n_nivel.Name = "n_nivel";
             this.n_nivel.Size = new System.Drawing.Size(153, 22);
             this.n_nivel.TabIndex = 18;
@@ -108,7 +109,8 @@
             // cb_status
             // 
             this.cb_status.FormattingEnabled = true;
-            this.cb_status.Location = new System.Drawing.Point(12, 180);
+            this.cb_status.Location = new System.Drawing.Point(12, 166);
+            this.cb_status.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_status.Name = "cb_status";
             this.cb_status.Size = new System.Drawing.Size(153, 24);
             this.cb_status.TabIndex = 17;
@@ -116,6 +118,7 @@
             // tb_senha
             // 
             this.tb_senha.Location = new System.Drawing.Point(195, 100);
+            this.tb_senha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_senha.Name = "tb_senha";
             this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(153, 22);
@@ -133,6 +136,7 @@
             // tb_name
             // 
             this.tb_name.Location = new System.Drawing.Point(12, 100);
+            this.tb_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(156, 22);
             this.tb_name.TabIndex = 14;
@@ -148,11 +152,12 @@
             // 
             // tb_id
             // 
-            this.tb_id.Location = new System.Drawing.Point(12, 40);
+            this.tb_id.Location = new System.Drawing.Point(12, 39);
+            this.tb_id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_id.Name = "tb_id";
             this.tb_id.PasswordChar = '*';
             this.tb_id.ReadOnly = true;
-            this.tb_id.Size = new System.Drawing.Size(123, 22);
+            this.tb_id.Size = new System.Drawing.Size(65, 22);
             this.tb_id.TabIndex = 25;
             this.tb_id.TabStop = false;
             this.tb_id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -169,71 +174,91 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.btn_fechar);
             this.panel1.Controls.Add(this.btn_excluir);
             this.panel1.Controls.Add(this.btn_salvar);
             this.panel1.Controls.Add(this.btn_novo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 325);
+            this.panel1.Location = new System.Drawing.Point(0, 315);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(777, 53);
+            this.panel1.Size = new System.Drawing.Size(777, 63);
             this.panel1.TabIndex = 26;
             // 
             // btn_fechar
             // 
+            this.btn_fechar.BackColor = System.Drawing.Color.Maroon;
+            this.btn_fechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_fechar.Location = new System.Drawing.Point(535, 18);
+            this.btn_fechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_fechar.Location = new System.Drawing.Point(614, 13);
+            this.btn_fechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(151, 23);
+            this.btn_fechar.Size = new System.Drawing.Size(151, 39);
             this.btn_fechar.TabIndex = 3;
             this.btn_fechar.Text = "Fechar Janela";
-            this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click_1);
             // 
             // btn_excluir
             // 
+            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_excluir.Location = new System.Drawing.Point(353, 18);
+            this.btn_excluir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_excluir.Location = new System.Drawing.Point(349, 13);
+            this.btn_excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(151, 23);
+            this.btn_excluir.Size = new System.Drawing.Size(151, 39);
             this.btn_excluir.TabIndex = 2;
             this.btn_excluir.Text = "Excluir Usuários";
-            this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.UseVisualStyleBackColor = false;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_salvar
             // 
+            this.btn_salvar.BackColor = System.Drawing.Color.Green;
             this.btn_salvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_salvar.Location = new System.Drawing.Point(175, 18);
+            this.btn_salvar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_salvar.Location = new System.Drawing.Point(179, 13);
+            this.btn_salvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(151, 23);
+            this.btn_salvar.Size = new System.Drawing.Size(151, 39);
             this.btn_salvar.TabIndex = 1;
             this.btn_salvar.Text = "Salvar Alterações";
-            this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.UseVisualStyleBackColor = false;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_novo
             // 
+            this.btn_novo.BackColor = System.Drawing.Color.Navy;
             this.btn_novo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_novo.Location = new System.Drawing.Point(4, 18);
+            this.btn_novo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_novo.Location = new System.Drawing.Point(12, 13);
+            this.btn_novo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(151, 23);
+            this.btn_novo.Size = new System.Drawing.Size(151, 39);
             this.btn_novo.TabIndex = 0;
             this.btn_novo.Text = "Novo Usuário";
-            this.btn_novo.UseVisualStyleBackColor = true;
+            this.btn_novo.UseVisualStyleBackColor = false;
+            this.btn_novo.Click += new System.EventHandler(this.btn_novo_Click);
             // 
             // dgv_usuarios
             // 
             this.dgv_usuarios.AllowUserToAddRows = false;
             this.dgv_usuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuarios.EnableHeadersVisualStyles = false;
-            this.dgv_usuarios.Location = new System.Drawing.Point(373, 40);
+            this.dgv_usuarios.Location = new System.Drawing.Point(373, 39);
+            this.dgv_usuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_usuarios.MultiSelect = false;
             this.dgv_usuarios.Name = "dgv_usuarios";
             this.dgv_usuarios.ReadOnly = true;
@@ -266,6 +291,7 @@
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GestaoUsuarios";

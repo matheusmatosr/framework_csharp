@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
@@ -50,7 +50,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha";
             // 
@@ -72,7 +72,8 @@
             // 
             // btn_logar
             // 
-            this.btn_logar.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn_logar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_logar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_logar.Location = new System.Drawing.Point(15, 139);
             this.btn_logar.Name = "btn_logar";
             this.btn_logar.Size = new System.Drawing.Size(220, 35);
@@ -83,7 +84,8 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_cancelar.Location = new System.Drawing.Point(15, 180);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(220, 31);
@@ -109,6 +111,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

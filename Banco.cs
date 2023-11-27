@@ -89,6 +89,48 @@ namespace novo_projeto_anker
             }
         }
 
+        public static void AtualizarUsuario(Usuario u)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+
+                cmd.CommandText = "UPDATE usuarios SET T_NOMEUSUARIO='" + u.nome + "', T_SENHA='" + u.senha + "', T_STATUSUSUARIO='" + u.status + "', N_NIVELUSUARIO=" + u.nivel + " WHERE N_IDUSUARIO=" + u.id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void DeletarUsuario(String id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+
+                cmd.CommandText = "DELETE FROM usuarios WHERE N_IDUSUARIO=" + id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static DataTable consulta(string sql)
         {
             SQLiteDataAdapter da = null;
