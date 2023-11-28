@@ -40,7 +40,7 @@ namespace novo_projeto_anker
             Banco.NovoUsuario(usuario);
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
+        private void btn_cancelar_Click(object sender, EventArgs e) // açao de clicar do botao cancelar
         {
             tb_name.Clear();
             tb_senha.Clear();
@@ -48,12 +48,12 @@ namespace novo_projeto_anker
             n_nivel.Value = 0;
         }
 
-        private void btn_fechar_Click(object sender, EventArgs e)
+        private void btn_fechar_Click(object sender, EventArgs e) // açao de clicar do botao fechar
         {
             Close();
         }
 
-        private void btn_novo_Click(object sender, EventArgs e)
+        private void btn_novo_Click(object sender, EventArgs e) // açao de clicar do botao novo
         {
             tb_name.Clear();
             tb_senha.Clear();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace novo_projeto_anker
 {
-    internal class Usuario
+    internal class Usuario // Classe Usuario que tem atributos semalhantes no banco de dados
     {
         public Int32 id;
         public string nome;

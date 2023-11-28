@@ -8,9 +8,9 @@ namespace novo_projeto_anker
 {
     internal static class Program
     {
-        /// <summary>
+        /// 
         /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
+        ///
         [STAThread]
         static void Main()
         {

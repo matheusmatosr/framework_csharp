@@ -54,6 +54,25 @@ namespace novo_projeto_anker
             login.ShowDialog();
         }
 
+        private void abreForm(int nivel, Form f)
+        {
+            if (Globais.logado)
+            {
+                if (Globais.nivel > 1)
+                {
+                    f.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado!");
+            }
+        }
+
         private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Globais.logado)
@@ -75,21 +94,14 @@ namespace novo_projeto_anker
 
         private void gestãoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Globais.logado)
-            {
-                if(Globais.nivel > 1)
-                {
-                    GestaoUsuarios gestaoUsuarios = new GestaoUsuarios();
-                    gestaoUsuarios.ShowDialog();
-                } else
-                {
-                    MessageBox.Show("Acesso não permitido!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário ter um usuário logado!");
-            }
+            GestaoUsuarios gestaoUsuarios = new GestaoUsuarios();
+            abreForm(1, gestaoUsuarios);
+        }
+
+        private void hORÁRIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Horarios horarios = new Horarios();
+            abreForm(2, horarios);
         }
     }
 }
