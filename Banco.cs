@@ -108,7 +108,7 @@ namespace novo_projeto_anker
                 var vcon = ConexaoBanco();
                 var cmd = vcon.CreateCommand();
 
-                cmd.CommandText = "SELECT N_IDUSUARIO, T_NOMEUSUARIO FROM usuarios";
+                cmd.CommandText = "SELECT N_IDUSUARIO AS ID, T_NOMEUSUARIO AS NOME FROM usuarios";
                 da = new SQLiteDataAdapter(cmd.CommandText, ConexaoBanco());
                 da.Fill(dt);
                 vcon.Close();

@@ -19,11 +19,11 @@ namespace novo_projeto_anker
 
         private void Horarios_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT N_IDHORARIO, T_DSCHORARIO FROM horarios ORDER BY T_DSCHORARIO";
+            string sql = "SELECT N_IDHORARIO AS ID, T_DSCHORARIO AS HORARIOS FROM horarios ORDER BY T_DSCHORARIO";
 
             dgv_horarios.DataSource = Banco.dql(sql);
-            dgv_horarios.Columns[0].Width = 60;
-            dgv_horarios.Columns[1].Width = 170;
+            dgv_horarios.Columns[0].Width = 120;
+            dgv_horarios.Columns[1].Width = 300;
             
         }
 
@@ -72,7 +72,7 @@ namespace novo_projeto_anker
             DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
             if(res == DialogResult.Yes)
             {
-                string q = "DELETE FROM usuarios WHERE N_IDHORARIO="+tb_idHorario.Text;
+                string q = "DELETE FROM horarios WHERE N_IDHORARIO="+tb_idHorario.Text;
                 Banco.dml(q);
                 dgv_horarios.Rows.Remove(dgv_horarios.CurrentRow);
             }

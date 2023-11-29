@@ -30,6 +30,9 @@ namespace novo_projeto_anker
         private void GestaoUsuarios_Load(object sender, EventArgs e)
         {
             dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
+            dgv_usuarios.Columns[0].Width = 60;
+            dgv_usuarios.Columns[1].Width = 170;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
