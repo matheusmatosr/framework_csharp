@@ -66,5 +66,10 @@ namespace novo_projeto_anker
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace novo_projeto_anker
         {
             dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
             dgv_usuarios.Columns[0].Width = 60;
-            dgv_usuarios.Columns[1].Width = 170;
+            dgv_usuarios.Columns[1].Width = 185;
 
         }
 
@@ -94,9 +94,8 @@ namespace novo_projeto_anker
             {
                 Banco.DeletarUsuario(tb_id.Text);
                 dgv_usuarios.Rows.Remove(dgv_usuarios.CurrentRow);
+                MessageBox.Show("Usuário excluido com sucesso!");
             }
-
-            MessageBox.Show("Usuário excluido com sucesso!");
 
         }
 

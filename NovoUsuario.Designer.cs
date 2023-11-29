@@ -45,6 +45,9 @@
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_novo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +71,7 @@
             // 
             // tb_senha
             // 
-            this.tb_senha.Location = new System.Drawing.Point(230, 67);
+            this.tb_senha.Location = new System.Drawing.Point(245, 67);
             this.tb_senha.Name = "tb_senha";
             this.tb_senha.PasswordChar = '*';
             this.tb_senha.Size = new System.Drawing.Size(194, 22);
@@ -77,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(227, 48);
+            this.label3.Location = new System.Drawing.Point(242, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 4;
@@ -88,12 +91,12 @@
             this.cb_status.FormattingEnabled = true;
             this.cb_status.Location = new System.Drawing.Point(15, 131);
             this.cb_status.Name = "cb_status";
-            this.cb_status.Size = new System.Drawing.Size(153, 24);
+            this.cb_status.Size = new System.Drawing.Size(192, 24);
             this.cb_status.TabIndex = 6;
             // 
             // n_nivel
             // 
-            this.n_nivel.Location = new System.Drawing.Point(203, 131);
+            this.n_nivel.Location = new System.Drawing.Point(245, 131);
             this.n_nivel.Name = "n_nivel";
             this.n_nivel.Size = new System.Drawing.Size(153, 22);
             this.n_nivel.TabIndex = 7;
@@ -110,7 +113,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(200, 112);
+            this.label5.Location = new System.Drawing.Point(242, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 9;
@@ -119,29 +122,29 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(221, 198);
+            this.label6.Location = new System.Drawing.Point(290, 198);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 10;
-            this.label6.Text = "A - Ativo";
+            this.label6.Text = "1 - Simples";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(409, 198);
+            this.label7.Location = new System.Drawing.Point(453, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
+            this.label7.Size = new System.Drawing.Size(65, 16);
             this.label7.TabIndex = 11;
-            this.label7.Text = "D - Desligado";
+            this.label7.Text = "3 - Mestre";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(295, 198);
+            this.label8.Location = new System.Drawing.Point(370, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 16);
+            this.label8.Size = new System.Drawing.Size(77, 16);
             this.label8.TabIndex = 12;
-            this.label8.Text = "B - Bloqueado";
+            this.label8.Text = "2 - Mediano";
             // 
             // panel1
             // 
@@ -211,18 +214,49 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 172);
+            this.label2.Location = new System.Drawing.Point(242, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "Níveis de usuário:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 172);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Status do usuário:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(119, 198);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 16);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "D - Desligado";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(36, 198);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "A - Ativo";
+            // 
             // NovoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 319);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
@@ -270,5 +304,8 @@
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_novo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
     }
 }
