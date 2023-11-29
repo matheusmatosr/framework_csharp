@@ -33,6 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lb_acesso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ledLogado = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,15 +42,12 @@
             this.uSUÁRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mANUTENÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bANCODEDADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hORÁRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ledLogado = new System.Windows.Forms.PictureBox();
+            this.hORARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acesso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).BeginInit();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).BeginInit();
             this.SuspendLayout();
             // 
             // acesso
@@ -104,6 +102,16 @@
             this.label1.Text = "Acesso:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // ledLogado
+            // 
+            this.ledLogado.Image = global::novo_projeto_anker.Properties.Resources.vermelho;
+            this.ledLogado.Location = new System.Drawing.Point(22, 15);
+            this.ledLogado.Name = "ledLogado";
+            this.ledLogado.Size = new System.Drawing.Size(48, 34);
+            this.ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ledLogado.TabIndex = 0;
+            this.ledLogado.TabStop = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -119,7 +127,7 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem,
             this.uSUÁRIOSToolStripMenuItem,
-            this.mANUTENÇÃOToolStripMenuItem});
+            this.hORARIOSToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(800, 28);
@@ -162,38 +170,16 @@
             // novoUsuárioToolStripMenuItem
             // 
             this.novoUsuárioToolStripMenuItem.Name = "novoUsuárioToolStripMenuItem";
-            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.novoUsuárioToolStripMenuItem.Text = "Novo Usuário";
             this.novoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.novoUsuárioToolStripMenuItem_Click);
             // 
             // gestãoUsuárioToolStripMenuItem
             // 
             this.gestãoUsuárioToolStripMenuItem.Name = "gestãoUsuárioToolStripMenuItem";
-            this.gestãoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.gestãoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gestãoUsuárioToolStripMenuItem.Text = "Gestão Usuário";
             this.gestãoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.gestãoUsuárioToolStripMenuItem_Click);
-            // 
-            // mANUTENÇÃOToolStripMenuItem
-            // 
-            this.mANUTENÇÃOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bANCODEDADOSToolStripMenuItem,
-            this.hORÁRIOSToolStripMenuItem});
-            this.mANUTENÇÃOToolStripMenuItem.Name = "mANUTENÇÃOToolStripMenuItem";
-            this.mANUTENÇÃOToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
-            this.mANUTENÇÃOToolStripMenuItem.Text = "MANUTENÇÃO";
-            // 
-            // bANCODEDADOSToolStripMenuItem
-            // 
-            this.bANCODEDADOSToolStripMenuItem.Name = "bANCODEDADOSToolStripMenuItem";
-            this.bANCODEDADOSToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.bANCODEDADOSToolStripMenuItem.Text = "BANCO DE DADOS";
-            // 
-            // hORÁRIOSToolStripMenuItem
-            // 
-            this.hORÁRIOSToolStripMenuItem.Name = "hORÁRIOSToolStripMenuItem";
-            this.hORÁRIOSToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.hORÁRIOSToolStripMenuItem.Text = "HORÁRIOS";
-            this.hORÁRIOSToolStripMenuItem.Click += new System.EventHandler(this.hORÁRIOSToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -205,15 +191,12 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // ledLogado
+            // hORARIOSToolStripMenuItem
             // 
-            this.ledLogado.Image = global::novo_projeto_anker.Properties.Resources.vermelho;
-            this.ledLogado.Location = new System.Drawing.Point(22, 15);
-            this.ledLogado.Name = "ledLogado";
-            this.ledLogado.Size = new System.Drawing.Size(48, 34);
-            this.ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ledLogado.TabIndex = 0;
-            this.ledLogado.TabStop = false;
+            this.hORARIOSToolStripMenuItem.Name = "hORARIOSToolStripMenuItem";
+            this.hORARIOSToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.hORARIOSToolStripMenuItem.Text = "HORARIOS";
+            this.hORARIOSToolStripMenuItem.Click += new System.EventHandler(this.hORARIOSToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -232,10 +215,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.acesso.ResumeLayout(false);
             this.acesso.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).EndInit();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,10 +240,8 @@
         private System.Windows.Forms.ToolStripMenuItem uSUÁRIOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestãoUsuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mANUTENÇÃOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bANCODEDADOSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hORÁRIOSToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem hORARIOSToolStripMenuItem;
     }
 }
 

@@ -100,8 +100,15 @@ namespace novo_projeto_anker
 
         private void hORÁRIOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             Horarios horarios = new Horarios();
             abreForm(2, horarios);
+        }
+
+        private void hORARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Horarios horarios = new Horarios();
+            abreForm(1, horarios);
         }
     }
 }

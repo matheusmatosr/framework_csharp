@@ -35,7 +35,7 @@ namespace novo_projeto_anker
             }
 
             string sql = "SELECT * FROM usuarios WHERE T_NOMEUSUARIO='"+username+"' AND T_SENHA='"+senha+"'";
-            dt = Banco.consulta(sql);
+            dt = Banco.dql(sql);
 
             if (dt.Rows.Count == 1)
             {

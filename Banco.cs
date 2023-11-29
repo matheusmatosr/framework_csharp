@@ -14,12 +14,66 @@ namespace novo_projeto_anker
     {
         private static SQLiteConnection conexao;
 
+        // Iniciar conexão com o Banco de Dados
         private static SQLiteConnection ConexaoBanco()
         {
             conexao = new SQLiteConnection("Data Source=C:\\OneDrive-Personal\\Documentos\\novo_projeto_anker\\banco\\banco_projeto.db");
             // conexao = new SQLiteConnection("Data Source=" + Globais.caminhoBanco + Globais.nomeBanco);
             conexao.Open();
             return conexao;
+        }
+
+        // Funções genéricas
+        public static DataTable dql(string sql) // Data Query Language (select)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = sql;
+
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void dml(string q, string msgOK=null, string msgERRO=null) // Data Maniuplation Language (Inserte, Delete, Update)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+
+                cmd.CommandText = q;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+                if (msgOK != null)
+                {
+                    MessageBox.Show(msgOK);
+                }
+            }
+            catch (Exception ex)
+            {
+                if (msgERRO != null)
+                {
+                    MessageBox.Show(msgOK+"\n"+ex.Message);
+                }
+                throw ex;
+            }
         }
 
         public static DataTable ObterTodosUsuarios()
@@ -126,29 +180,6 @@ namespace novo_projeto_anker
                 cmd.ExecuteNonQuery();
                 vcon.Close();
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public static DataTable consulta(string sql)
-        {
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-
-            try
-            {
-                var vcon = ConexaoBanco();
-                var cmd = vcon.CreateCommand();
-                cmd.CommandText = sql;
-
-                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
-                da.Fill(dt);
-                vcon.Close();
-
-                return dt;
-           }
             catch (Exception ex)
             {
                 throw ex;
