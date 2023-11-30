@@ -12,6 +12,12 @@ namespace novo_projeto_anker
 {
     public partial class Horarios : Form
     {
+        public string NomeUsuario { get; set; }
+        public string IdUsuario { get; set; }
+
+        private Label lblNomeUsuario;
+
+        // Construtor que aceita um objeto Usuario
         public Horarios()
         {
             InitializeComponent();
@@ -31,7 +37,7 @@ namespace novo_projeto_anker
         {
             DataGridView dgv = (DataGridView)sender;
             int contLinhas = dgv.SelectedRows.Count;
-            if(contLinhas > 0)
+            if (contLinhas > 0)
             {
                 DataTable dt = new DataTable();
                 string vid = dgv.SelectedRows[0].Cells[0].Value.ToString();
@@ -57,25 +63,35 @@ namespace novo_projeto_anker
             string sql;
             if (tb_idHorario.Text == "")
             {
-                sql = "INSERT INTO horarios (T_DSCHORARIO, T_ROTINAS) VALUES ('" + mtb_dscHorario.Text + "', '" + tb_rotinas.Text + "')";
+                sql = "INSERT INTO horarios (T_DSCHORARIO, T_ROTINAS) VALUES (@dschorario, @rotinas)";
             }
             else
             {
-                sql = "UPDATE horarios SET T_DSCHORARIO='" + mtb_dscHorario.Text + "', T_ROTINAS='tb_rotinas' WHERE N_IDHORARIO=" + tb_rotinas.Text;
+                sql = "UPDATE horarios SET T_DSCHORARIO=@dschorario, T_ROTINAS=@rotinas WHERE N_IDHORARIO=@idHorario";
             }
 
-            Banco.dml(sql);
-            
-            sql = "SELECT N_IDHORARIO, T_DSCHORARIO, T_ROTINAS FROM horarios ORDER BY T_DSCHORARIO";
-            dgv_horarios.DataSource = Banco.dql(sql);
+            // Adicione os parâmetros
+            var parametros = new Dictionary<string, object>
+            {
+                { "@dschorario", mtb_dscHorario.Text },
+                { "@rotinas", tb_rotinas.Text },
+                { "@idHorario", tb_idHorario.Text }
+            };
+
+            // Chame a função dml com os parâmetros
+            Banco.dml(sql, parametros);
+
+            // Atualize apenas o DataSource sem chamar dql novamente
+            dgv_horarios.DataSource = Banco.dql("SELECT N_IDHORARIO AS ID, T_DSCHORARIO AS HORARIOS, T_ROTINAS AS ROTINAS FROM horarios ORDER BY T_DSCHORARIO");
         }
+
 
         private void btn_excluir_horario_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir?", MessageBoxButtons.YesNo);
-            if(res == DialogResult.Yes)
+            if (res == DialogResult.Yes)
             {
-                string q = "DELETE FROM horarios WHERE N_IDHORARIO=" + tb_idHorario.Text + " AND T_ROTINAS=" + tb_rotinas.Text;
+                string q = "DELETE FROM horarios WHERE N_IDHORARIO=" + tb_idHorario.Text;
                 Banco.dml(q);
                 dgv_horarios.Rows.Remove(dgv_horarios.CurrentRow);
                 MessageBox.Show("Horário excluído com sucesso!");
@@ -86,5 +102,6 @@ namespace novo_projeto_anker
         {
             Close();
         }
+
     }
 }

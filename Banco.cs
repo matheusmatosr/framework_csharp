@@ -23,7 +23,7 @@ namespace novo_projeto_anker
         }
 
         // Funções genéricas
-        public static DataTable dql(string sql) // Data Query Language (select)
+        public static DataTable dql(string sql, Dictionary<string, object> parametros = null)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -33,6 +33,15 @@ namespace novo_projeto_anker
                 var vcon = ConexaoBanco();
                 var cmd = vcon.CreateCommand();
                 cmd.CommandText = sql;
+
+                // Adicione os parâmetros, se existirem
+                if (parametros != null)
+                {
+                    foreach (var parametro in parametros)
+                    {
+                        cmd.Parameters.AddWithValue(parametro.Key, parametro.Value);
+                    }
+                }
 
                 da = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 da.Fill(dt);
@@ -46,20 +55,31 @@ namespace novo_projeto_anker
             }
         }
 
-        public static void dml(string q, string msgOK=null, string msgERRO=null) // Data Maniuplation Language (Inserte, Delete, Update)
+
+        public static void dml(string q, Dictionary<string, object> parametros = null, string msgOK = null, string msgERRO = null)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
 
+            var vcon = ConexaoBanco();
+            var cmd = vcon.CreateCommand();
+
             try
             {
-                var vcon = ConexaoBanco();
-                var cmd = vcon.CreateCommand();
-
                 cmd.CommandText = q;
+
+                // Adicione os parâmetros, se existirem
+                if (parametros != null)
+                {
+                    foreach (var parametro in parametros)
+                    {
+                        cmd.Parameters.AddWithValue(parametro.Key, parametro.Value);
+                    }
+                }
+
                 da = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 cmd.ExecuteNonQuery();
-                vcon.Close();
+
                 if (msgOK != null)
                 {
                     MessageBox.Show(msgOK);
@@ -69,11 +89,20 @@ namespace novo_projeto_anker
             {
                 if (msgERRO != null)
                 {
-                    MessageBox.Show(msgOK+"\n"+ex.Message);
+                    MessageBox.Show(msgERRO + "\n" + ex.Message);
                 }
                 throw ex;
             }
+            finally
+            {
+                if (vcon.State == ConnectionState.Open)
+                {
+                    vcon.Close();
+                }
+            }
         }
+
+
 
         public static DataTable ObterTodosUsuarios()
         {

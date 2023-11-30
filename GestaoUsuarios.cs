@@ -45,7 +45,7 @@ namespace novo_projeto_anker
             DataGridView dgv = (DataGridView)sender;
             int contlinhas = dgv.SelectedRows.Count;
 
-            if(contlinhas > 0)
+            if (contlinhas > 0)
             {
                 DataTable dt = new DataTable();
                 string vid = dgv.SelectedRows[0].Cells[0].Value.ToString();
@@ -105,6 +105,41 @@ namespace novo_projeto_anker
         }
 
         private void dgv_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Verifica se há alguma linha selecionada no DataGridView
+            if (dgv_usuarios.SelectedRows.Count > 0)
+            {
+                // Obtém o ID do usuário selecionado
+                string idUsuarioSelecionado = dgv_usuarios.SelectedRows[0].Cells[0].Value.ToString();
+
+                // Obtém os dados do usuário selecionado
+                DataTable dt = Banco.ObterDadosUsuários(idUsuarioSelecionado);
+
+                // Obtém o nome do usuário
+                string nomeUsuarioSelecionado = dt.Rows[0].Field<string>("T_NOMEUSUARIO");
+
+                // Cria uma instância da classe Horarios
+                Horarios horariosForm = new Horarios();
+
+                // Define o ID e o nome do usuário na propriedade do formulário Horarios
+                horariosForm.IdUsuario = idUsuarioSelecionado;
+                horariosForm.NomeUsuario = nomeUsuarioSelecionado;
+
+                // Exibe o formulário Horarios
+                horariosForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um usuário antes de criar uma rotina.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void visuRotinas_Click(object sender, EventArgs e)
         {
 
         }
