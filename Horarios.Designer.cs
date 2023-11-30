@@ -30,6 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_nomeUsuario = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lb_acesso = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_fechar_horario = new System.Windows.Forms.Button();
             this.btn_excluir_horario = new System.Windows.Forms.Button();
             this.btn_salvar_horario = new System.Windows.Forms.Button();
@@ -41,10 +45,6 @@
             this.mtb_dscHorario = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_rotinas = new System.Windows.Forms.TextBox();
-            this.lb_nomeUsuario = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lb_acesso = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.ledLogado = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_horarios)).BeginInit();
@@ -65,6 +65,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 63);
             this.panel1.TabIndex = 27;
+            // 
+            // lb_nomeUsuario
+            // 
+            this.lb_nomeUsuario.AutoSize = true;
+            this.lb_nomeUsuario.Location = new System.Drawing.Point(233, 35);
+            this.lb_nomeUsuario.Name = "lb_nomeUsuario";
+            this.lb_nomeUsuario.Size = new System.Drawing.Size(19, 16);
+            this.lb_nomeUsuario.TabIndex = 4;
+            this.lb_nomeUsuario.Text = "---";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(170, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Usuário:";
+            // 
+            // lb_acesso
+            // 
+            this.lb_acesso.AutoSize = true;
+            this.lb_acesso.Location = new System.Drawing.Point(145, 35);
+            this.lb_acesso.Name = "lb_acesso";
+            this.lb_acesso.Size = new System.Drawing.Size(14, 16);
+            this.lb_acesso.TabIndex = 7;
+            this.lb_acesso.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(83, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Acesso:";
             // 
             // btn_fechar_horario
             // 
@@ -149,6 +185,7 @@
             this.dgv_horarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_horarios.Size = new System.Drawing.Size(733, 225);
             this.dgv_horarios.TabIndex = 28;
+            this.dgv_horarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_horarios_CellContentClick);
             this.dgv_horarios.SelectionChanged += new System.EventHandler(this.dgv_horarios_SelectionChanged);
             // 
             // label3
@@ -204,42 +241,6 @@
             this.tb_rotinas.Name = "tb_rotinas";
             this.tb_rotinas.Size = new System.Drawing.Size(223, 22);
             this.tb_rotinas.TabIndex = 34;
-            // 
-            // lb_nomeUsuario
-            // 
-            this.lb_nomeUsuario.AutoSize = true;
-            this.lb_nomeUsuario.Location = new System.Drawing.Point(233, 35);
-            this.lb_nomeUsuario.Name = "lb_nomeUsuario";
-            this.lb_nomeUsuario.Size = new System.Drawing.Size(19, 16);
-            this.lb_nomeUsuario.TabIndex = 4;
-            this.lb_nomeUsuario.Text = "---";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(170, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Usuário:";
-            // 
-            // lb_acesso
-            // 
-            this.lb_acesso.AutoSize = true;
-            this.lb_acesso.Location = new System.Drawing.Point(145, 35);
-            this.lb_acesso.Name = "lb_acesso";
-            this.lb_acesso.Size = new System.Drawing.Size(14, 16);
-            this.lb_acesso.TabIndex = 7;
-            this.lb_acesso.Text = "0";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(83, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Acesso:";
             // 
             // ledLogado
             // 

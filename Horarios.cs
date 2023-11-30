@@ -124,5 +124,9 @@ namespace novo_projeto_anker
             Close();
         }
 
+        private void dgv_horarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -150,12 +150,31 @@ namespace novo_projeto_anker
             }
         }
 
-
-
-
         private void visuRotinas_Click(object sender, EventArgs e)
         {
+            if (dgv_usuarios.SelectedRows.Count > 0)
+            {
+                string idUsuarioSelecionado = dgv_usuarios.SelectedRows[0].Cells[0].Value.ToString();
+                string idUsuarioLogado = Form1Reference.lb_acesso.Text;
 
+                // Verifica se o usuário selecionado é o mesmo que está logado
+                if (idUsuarioSelecionado == idUsuarioLogado)
+                {
+                    DataTable dt = Banco.ObterDadosUsuários(idUsuarioSelecionado);
+                    string nomeUsuarioSelecionado = dt.Rows[0].Field<string>("T_NOMEUSUARIO");
+
+                    VerRotina rotinas = new VerRotina();
+                    rotinas.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Você só pode visualizar rotinas do seu próprio usuário.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um usuário antes de visualizar as rotinas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

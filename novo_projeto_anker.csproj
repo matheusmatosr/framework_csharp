@@ -100,6 +100,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="VerRotina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerRotina.Designer.cs">
+      <DependentUpon>VerRotina.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GestaoUsuarios.resx">
       <DependentUpon>GestaoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +131,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VerRotina.resx">
+      <DependentUpon>VerRotina.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
