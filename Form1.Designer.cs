@@ -184,8 +184,7 @@
             // hORARIOSToolStripMenuItem
             // 
             this.hORARIOSToolStripMenuItem.Name = "hORARIOSToolStripMenuItem";
-            this.hORARIOSToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.hORARIOSToolStripMenuItem.Text = "ROTINAS";
+            this.hORARIOSToolStripMenuItem.Size = new System.Drawing.Size(14, 24);
             this.hORARIOSToolStripMenuItem.Click += new System.EventHandler(this.hORARIOSToolStripMenuItem_Click);
             // 
             // pictureBox1

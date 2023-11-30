@@ -18,19 +18,40 @@ namespace novo_projeto_anker
         private Label lblNomeUsuario;
 
         // Construtor que aceita um objeto Usuario
+       
         public Horarios()
         {
             InitializeComponent();
         }
 
+        // Public method to set user information
+        public void SetUserInfo()
+        {
+            lb_nomeUsuario.Text = NomeUsuario;
+            lb_acesso.Text = IdUsuario;
+            if(NomeUsuario != null)
+            {
+                ledLogado.Image = Properties.Resources.verde;
+            }
+            else
+            {
+                ledLogado.Image = Properties.Resources.vermelho;
+            }
+        }
+
         private void Horarios_Load(object sender, EventArgs e)
         {
+            SetUserInfo();
+
             string sql = "SELECT N_IDHORARIO AS ID, T_DSCHORARIO AS HORARIOS, T_ROTINAS AS ROTINAS FROM horarios ORDER BY T_DSCHORARIO";
 
             dgv_horarios.DataSource = Banco.dql(sql);
             dgv_horarios.Columns[0].Width = 120;
             dgv_horarios.Columns[1].Width = 200;
             dgv_horarios.Columns[2].Width = 200;
+
+            lb_nomeUsuario.Text = NomeUsuario;
+            lb_acesso.Text = IdUsuario;
         }
 
         private void dgv_horarios_SelectionChanged(object sender, EventArgs e)

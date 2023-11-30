@@ -17,6 +17,7 @@ namespace novo_projeto_anker
             InitializeComponent();
             Login login = new Login(this);
             login.ShowDialog();
+            hORARIOSToolStripMenuItem.Click += hORARIOSToolStripMenuItem_Click;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -79,9 +80,10 @@ namespace novo_projeto_anker
             {
                 if (Globais.nivel > 1)
                 {
-                   NovoUsuario novoUsuario = new NovoUsuario();
-                   novoUsuario.ShowDialog();
-                } else
+                    NovoUsuario novoUsuario = new NovoUsuario();
+                    novoUsuario.ShowDialog();
+                }
+                else
                 {
                     MessageBox.Show("Acesso não permitido! Tente novamente.");
                 }
@@ -94,21 +96,27 @@ namespace novo_projeto_anker
 
         private void gestãoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestaoUsuarios gestaoUsuarios = new GestaoUsuarios();
-            abreForm(1, gestaoUsuarios);
-        }
+            // Criar uma instância do formulário GestaoUsuarios
+            GestaoUsuarios gestaoUsuariosForm = new GestaoUsuarios();
 
-        private void hORÁRIOSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-            Horarios horarios = new Horarios();
-            abreForm(2, horarios);
+            // Definir a referência ao Form1
+            gestaoUsuariosForm.Form1Reference = this;
+
+            // Mostrar o formulário GestaoUsuarios
+            gestaoUsuariosForm.ShowDialog();
         }
 
         private void hORARIOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Horarios horarios = new Horarios();
-            abreForm(1, horarios);
+            AbrirHorarios();
+        }
+
+        private void AbrirHorarios()
+        {
+            Horarios horariosForm = new Horarios();
+            horariosForm.NomeUsuario = lb_nomeUsuario.Text;
+            horariosForm.IdUsuario = lb_acesso.Text;
+            horariosForm.ShowDialog();
         }
     }
 }

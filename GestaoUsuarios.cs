@@ -12,6 +12,7 @@ namespace novo_projeto_anker
 {
     public partial class GestaoUsuarios : Form
     {
+        public Form1 Form1Reference { get; set; }
         public GestaoUsuarios()
         {
             InitializeComponent();
@@ -111,33 +112,46 @@ namespace novo_projeto_anker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Verifica se há alguma linha selecionada no DataGridView
             if (dgv_usuarios.SelectedRows.Count > 0)
             {
-                // Obtém o ID do usuário selecionado
                 string idUsuarioSelecionado = dgv_usuarios.SelectedRows[0].Cells[0].Value.ToString();
-
-                // Obtém os dados do usuário selecionado
                 DataTable dt = Banco.ObterDadosUsuários(idUsuarioSelecionado);
-
-                // Obtém o nome do usuário
                 string nomeUsuarioSelecionado = dt.Rows[0].Field<string>("T_NOMEUSUARIO");
 
-                // Cria uma instância da classe Horarios
-                Horarios horariosForm = new Horarios();
+                // Verifique se a referência ao Form1 é nula
+                if (Form1Reference != null)
+                {
+                    // Configure as informações do usuário diretamente do Form1
+                    string nomeUsuarioLogado = Form1Reference.lb_nomeUsuario.Text;
+                    string idUsuarioLogado = Form1Reference.lb_acesso.Text;
 
-                // Define o ID e o nome do usuário na propriedade do formulário Horarios
-                horariosForm.IdUsuario = idUsuarioSelecionado;
-                horariosForm.NomeUsuario = nomeUsuarioSelecionado;
+                    // Comparar se o usuário logado é o mesmo que está sendo visualizado
+                    if (idUsuarioSelecionado == idUsuarioLogado)
+                    {
+                        // Criar uma instância do formulário Horarios
+                        Horarios horariosForm = new Horarios();
 
-                // Exibe o formulário Horarios
-                horariosForm.ShowDialog();
+                        // Definir informações do usuário
+                        horariosForm.NomeUsuario = nomeUsuarioSelecionado;
+                        horariosForm.IdUsuario = idUsuarioSelecionado;
+
+                        // Mostrar o formulário Horarios
+                        horariosForm.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Você só pode visualizar rotinas do seu próprio usuário.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Selecione um usuário antes de criar uma rotina.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+
+
 
         private void visuRotinas_Click(object sender, EventArgs e)
         {
