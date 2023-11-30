@@ -50,7 +50,7 @@
             this.dgv_horarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_horarios.EnableHeadersVisualStyles = false;
-            this.dgv_horarios.Location = new System.Drawing.Point(37, 64);
+            this.dgv_horarios.Location = new System.Drawing.Point(27, 49);
             this.dgv_horarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_horarios.MultiSelect = false;
             this.dgv_horarios.Name = "dgv_horarios";
@@ -59,14 +59,14 @@
             this.dgv_horarios.RowHeadersWidth = 51;
             this.dgv_horarios.RowTemplate.Height = 24;
             this.dgv_horarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_horarios.Size = new System.Drawing.Size(733, 225);
+            this.dgv_horarios.Size = new System.Drawing.Size(733, 251);
             this.dgv_horarios.TabIndex = 29;
             this.dgv_horarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_horarios_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(328, 30);
+            this.label1.Location = new System.Drawing.Point(327, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 30;
@@ -78,7 +78,7 @@
             this.btn_fechar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_fechar_horario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_fechar_horario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_fechar_horario.Location = new System.Drawing.Point(619, 326);
+            this.btn_fechar_horario.Location = new System.Drawing.Point(609, 319);
             this.btn_fechar_horario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_fechar_horario.Name = "btn_fechar_horario";
             this.btn_fechar_horario.Size = new System.Drawing.Size(151, 39);
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 391);
+            this.ClientSize = new System.Drawing.Size(800, 369);
             this.Controls.Add(this.btn_fechar_horario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_horarios);

@@ -142,7 +142,7 @@
             this.tb_id.Size = new System.Drawing.Size(65, 22);
             this.tb_id.TabIndex = 25;
             this.tb_id.TabStop = false;
-            this.tb_id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.tb_id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tb
             // 
@@ -152,7 +152,7 @@
             this.tb.Size = new System.Drawing.Size(23, 16);
             this.tb.TabIndex = 24;
             this.tb.Text = "ID ";
-            this.tb.Click += new System.EventHandler(this.label2_Click);
+            //this.tb.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 

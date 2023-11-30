@@ -12,35 +12,23 @@ namespace novo_projeto_anker
 {
     public partial class GestaoUsuarios : Form
     {
+        // Referência ao Form1 para comunicação entre formulários
         public Form1 Form1Reference { get; set; }
+
         public GestaoUsuarios()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Carrega os dados dos usuários no DataGridView ao carregar o formulário
         private void GestaoUsuarios_Load(object sender, EventArgs e)
         {
             dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
             dgv_usuarios.Columns[0].Width = 60;
             dgv_usuarios.Columns[1].Width = 185;
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Atualiza os campos de texto com os dados do usuário selecionado no DataGridView
         private void dgv_usuarios_SelectionChanged(object sender, EventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
@@ -60,19 +48,20 @@ namespace novo_projeto_anker
             }
         }
 
+        // Abre o formulário para adicionar um novo usuário
         private void btn_novo_Click(object sender, EventArgs e)
         {
             NovoUsuario novoUsuario = new NovoUsuario();
             novoUsuario.ShowDialog();
             dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
-
         }
 
+        // Salva as alterações feitas no usuário selecionado
         private void btn_salvar_Click(object sender, EventArgs e)
         {
-            int linha = dgv_usuarios.SelectedRows[0].Index; // grava a linha que ta selecionada
+            int linha = dgv_usuarios.SelectedRows[0].Index; // grava a linha que está selecionada
 
-            // pegando os dados atualizados
+            // Pegando os dados atualizados
             Usuario u = new Usuario();
             u.id = Convert.ToInt32(tb_id.Text);
             u.nome = tb_name.Text;
@@ -82,22 +71,22 @@ namespace novo_projeto_anker
 
             Banco.AtualizarUsuario(u);
             dgv_usuarios.DataSource = Banco.ObterTodosUsuariosIdNomes();
-            dgv_usuarios.CurrentCell = dgv_usuarios[0, linha]; // mantem na seleçao que ta sendo modificada o usuario.
+            dgv_usuarios.CurrentCell = dgv_usuarios[0, linha]; // mantém na seleção que está sendo modificada o usuário.
 
             MessageBox.Show("Alterações salvas com sucesso!");
         }
 
+        // Exclui o usuário selecionado após confirmação
         private void btn_excluir_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Deseja realmente excluir este usuário?", "Excluir?", MessageBoxButtons.YesNo); // confirmar exclusao
+            DialogResult res = MessageBox.Show("Deseja realmente excluir este usuário?", "Excluir?", MessageBoxButtons.YesNo); // confirmar exclusão
 
             if (res == DialogResult.Yes)
             {
                 Banco.DeletarUsuario(tb_id.Text);
                 dgv_usuarios.Rows.Remove(dgv_usuarios.CurrentRow);
-                MessageBox.Show("Usuário excluido com sucesso!");
+                MessageBox.Show("Usuário excluído com sucesso!");
             }
-
         }
 
         private void btn_fechar_Click_1(object sender, EventArgs e)

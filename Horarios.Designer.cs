@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lb_acesso = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.ledLogado = new System.Windows.Forms.PictureBox();
             this.btn_fechar_horario = new System.Windows.Forms.Button();
             this.btn_excluir_horario = new System.Windows.Forms.Button();
             this.btn_salvar_horario = new System.Windows.Forms.Button();
@@ -45,10 +46,9 @@
             this.mtb_dscHorario = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_rotinas = new System.Windows.Forms.TextBox();
-            this.ledLogado = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_horarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_horarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +65,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 63);
             this.panel1.TabIndex = 27;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lb_nomeUsuario
             // 
@@ -101,6 +102,16 @@
             this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "Acesso:";
+            // 
+            // ledLogado
+            // 
+            this.ledLogado.Image = global::novo_projeto_anker.Properties.Resources.vermelho;
+            this.ledLogado.Location = new System.Drawing.Point(29, 17);
+            this.ledLogado.Name = "ledLogado";
+            this.ledLogado.Size = new System.Drawing.Size(48, 34);
+            this.ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ledLogado.TabIndex = 3;
+            this.ledLogado.TabStop = false;
             // 
             // btn_fechar_horario
             // 
@@ -242,16 +253,6 @@
             this.tb_rotinas.Size = new System.Drawing.Size(223, 22);
             this.tb_rotinas.TabIndex = 34;
             // 
-            // ledLogado
-            // 
-            this.ledLogado.Image = global::novo_projeto_anker.Properties.Resources.vermelho;
-            this.ledLogado.Location = new System.Drawing.Point(29, 17);
-            this.ledLogado.Name = "ledLogado";
-            this.ledLogado.Size = new System.Drawing.Size(48, 34);
-            this.ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ledLogado.TabIndex = 3;
-            this.ledLogado.TabStop = false;
-            // 
             // Horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -279,8 +280,8 @@
             this.Load += new System.EventHandler(this.Horarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_horarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_horarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
