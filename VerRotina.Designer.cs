@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_horarios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_fechar_horario = new System.Windows.Forms.Button();
@@ -40,17 +40,17 @@
             this.dgv_horarios.AllowUserToAddRows = false;
             this.dgv_horarios.AllowUserToDeleteRows = false;
             this.dgv_horarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_horarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_horarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_horarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_horarios.EnableHeadersVisualStyles = false;
-            this.dgv_horarios.Location = new System.Drawing.Point(37, 90);
+            this.dgv_horarios.Location = new System.Drawing.Point(37, 64);
             this.dgv_horarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_horarios.MultiSelect = false;
             this.dgv_horarios.Name = "dgv_horarios";
@@ -66,7 +66,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 61);
+            this.label1.Location = new System.Drawing.Point(328, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 30;
@@ -78,7 +78,7 @@
             this.btn_fechar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_fechar_horario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_fechar_horario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_fechar_horario.Location = new System.Drawing.Point(619, 349);
+            this.btn_fechar_horario.Location = new System.Drawing.Point(619, 326);
             this.btn_fechar_horario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_fechar_horario.Name = "btn_fechar_horario";
             this.btn_fechar_horario.Size = new System.Drawing.Size(151, 39);
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 409);
+            this.ClientSize = new System.Drawing.Size(800, 391);
             this.Controls.Add(this.btn_fechar_horario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_horarios);

@@ -29,7 +29,7 @@ namespace novo_projeto_anker
         {
             lb_nomeUsuario.Text = NomeUsuario;
             lb_acesso.Text = IdUsuario;
-            if(NomeUsuario != null)
+            if (NomeUsuario != null)
             {
                 ledLogado.Image = Properties.Resources.verde;
             }

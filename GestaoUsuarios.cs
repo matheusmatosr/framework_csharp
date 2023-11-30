@@ -126,14 +126,14 @@ namespace novo_projeto_anker
                     string idUsuarioLogado = Form1Reference.lb_acesso.Text;
 
                     // Comparar se o usuário logado é o mesmo que está sendo visualizado
-                    if (idUsuarioSelecionado == idUsuarioLogado)
+                    if (nomeUsuarioSelecionado == nomeUsuarioLogado)
                     {
                         // Criar uma instância do formulário Horarios
                         Horarios horariosForm = new Horarios();
 
                         // Definir informações do usuário
                         horariosForm.NomeUsuario = nomeUsuarioSelecionado;
-                        horariosForm.IdUsuario = idUsuarioSelecionado;
+                        horariosForm.IdUsuario = idUsuarioLogado;
 
                         // Mostrar o formulário Horarios
                         horariosForm.ShowDialog();
@@ -155,26 +155,28 @@ namespace novo_projeto_anker
             if (dgv_usuarios.SelectedRows.Count > 0)
             {
                 string idUsuarioSelecionado = dgv_usuarios.SelectedRows[0].Cells[0].Value.ToString();
-                string idUsuarioLogado = Form1Reference.lb_acesso.Text;
+                DataTable dt = Banco.ObterDadosUsuários(idUsuarioSelecionado);
+                string nomeUsuarioSelecionado = dt.Rows[0].Field<string>("T_NOMEUSUARIO");
 
-                // Verifica se o usuário selecionado é o mesmo que está logado
-                if (idUsuarioSelecionado == idUsuarioLogado)
+                // Verifique se a referência ao Form1 é nula
+                if (Form1Reference != null)
                 {
-                    DataTable dt = Banco.ObterDadosUsuários(idUsuarioSelecionado);
-                    string nomeUsuarioSelecionado = dt.Rows[0].Field<string>("T_NOMEUSUARIO");
+                    // Configure as informações do usuário diretamente do Form1
+                    string nomeUsuarioLogado = Form1Reference.lb_nomeUsuario.Text;
 
-                    VerRotina rotinas = new VerRotina();
-                    rotinas.ShowDialog();
+                    // Comparar se o usuário logado é o mesmo que está sendo visualizado
+                    if (nomeUsuarioSelecionado == nomeUsuarioLogado)
+                    {
+                        VerRotina rotinas = new VerRotina();
+                        rotinas.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Você só pode visualizar rotinas do seu próprio usuário.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Você só pode visualizar rotinas do seu próprio usuário.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Selecione um usuário antes de visualizar as rotinas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
     }
 }
