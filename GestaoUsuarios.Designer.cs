@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.n_nivel = new System.Windows.Forms.NumericUpDown();
@@ -48,37 +45,17 @@
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_novo = new System.Windows.Forms.Button();
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.n_nivel)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(94, 208);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 16);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "B - Bloqueado";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(209, 208);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 16);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "D - Desligado";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "A - Ativo";
             // 
             // label5
             // 
@@ -268,20 +245,88 @@
             this.dgv_usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_usuarios.Size = new System.Drawing.Size(367, 256);
             this.dgv_usuarios.TabIndex = 0;
+            this.dgv_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellContentClick);
             this.dgv_usuarios.SelectionChanged += new System.EventHandler(this.dgv_usuarios_SelectionChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 211);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 16);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Status do usuário:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(21, 262);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 16);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "D - Desligado";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 237);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 16);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "A - Ativo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(192, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 16);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Níveis de usuário:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(233, 262);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 16);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "2 - Mediano";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(233, 288);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 16);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "3 - Mestre";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(233, 237);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 16);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "1 - Simples";
             // 
             // GestaoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 378);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgv_usuarios);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tb_id);
             this.Controls.Add(this.tb);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.n_nivel);
@@ -307,10 +352,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown n_nivel;
@@ -327,5 +368,12 @@
         private System.Windows.Forms.Button btn_fechar;
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

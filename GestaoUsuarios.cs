@@ -103,5 +103,10 @@ namespace novo_projeto_anker
         {
             Close();
         }
+
+        private void dgv_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

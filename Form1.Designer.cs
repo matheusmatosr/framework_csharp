@@ -42,8 +42,8 @@
             this.uSUÁRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestãoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.hORARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.acesso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ledLogado)).BeginInit();
             this.menuStrip2.SuspendLayout();
@@ -170,16 +170,23 @@
             // novoUsuárioToolStripMenuItem
             // 
             this.novoUsuárioToolStripMenuItem.Name = "novoUsuárioToolStripMenuItem";
-            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.novoUsuárioToolStripMenuItem.Text = "Novo Usuário";
             this.novoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.novoUsuárioToolStripMenuItem_Click);
             // 
             // gestãoUsuárioToolStripMenuItem
             // 
             this.gestãoUsuárioToolStripMenuItem.Name = "gestãoUsuárioToolStripMenuItem";
-            this.gestãoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gestãoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.gestãoUsuárioToolStripMenuItem.Text = "Gestão Usuário";
             this.gestãoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.gestãoUsuárioToolStripMenuItem_Click);
+            // 
+            // hORARIOSToolStripMenuItem
+            // 
+            this.hORARIOSToolStripMenuItem.Name = "hORARIOSToolStripMenuItem";
+            this.hORARIOSToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.hORARIOSToolStripMenuItem.Text = "ROTINAS";
+            this.hORARIOSToolStripMenuItem.Click += new System.EventHandler(this.hORARIOSToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -190,13 +197,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // hORARIOSToolStripMenuItem
-            // 
-            this.hORARIOSToolStripMenuItem.Name = "hORARIOSToolStripMenuItem";
-            this.hORARIOSToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.hORARIOSToolStripMenuItem.Text = "HORARIOS";
-            this.hORARIOSToolStripMenuItem.Click += new System.EventHandler(this.hORARIOSToolStripMenuItem_Click);
             // 
             // Form1
             // 

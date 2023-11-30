@@ -89,6 +89,9 @@
             // cb_status
             // 
             this.cb_status.FormattingEnabled = true;
+            this.cb_status.Items.AddRange(new object[] {
+            "A",
+            "D"});
             this.cb_status.Location = new System.Drawing.Point(15, 131);
             this.cb_status.Name = "cb_status";
             this.cb_status.Size = new System.Drawing.Size(192, 24);

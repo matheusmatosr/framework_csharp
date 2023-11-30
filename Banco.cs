@@ -18,7 +18,6 @@ namespace novo_projeto_anker
         private static SQLiteConnection ConexaoBanco()
         {
             conexao = new SQLiteConnection("Data Source=C:\\OneDrive-Personal\\Documentos\\novo_projeto_anker\\banco\\banco_projeto.db");
-            // conexao = new SQLiteConnection("Data Source=" + Globais.caminhoBanco + Globais.nomeBanco);
             conexao.Open();
             return conexao;
         }
