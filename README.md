@@ -1,4 +1,4 @@
-### Crud
+# Crud
 
 Sistema de gestão de rotinas: login, cadastro de usuários, gestão de usuários, cadastro de rotinas e horários para cada usuário logado, utilizando o banco SQLite.
 
