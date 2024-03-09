@@ -11,4 +11,6 @@ git clone https://github.com/matheusmatosr/crud_csharp.git
 
 2. Abre o projeto no Visual Studio
 
-3. Rode em Run
+3. Baixe o SQLite
+
+4. No Visual Studio, rode o projeto em Run
