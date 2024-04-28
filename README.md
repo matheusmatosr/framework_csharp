@@ -4,6 +4,8 @@ Sistema de gestão de rotinas: login, cadastro de usuários, gestão de usuário
 
 ## 🖥️ Instalação
 
+Para rodar o projeto, preferencialmente utilize o editor de código: Visual Studio.
+
 1. Clone este repositório
 ```bash
 git clone https://github.com/matheusmatosr/crud_csharp.git
